@@ -50,7 +50,7 @@ class Kutubxonachi(models.Model):
 
 
 class Record(models.Model):
-    talaba = models.ForeignKey(Talaba, on_delete=models.SET_NULL, null=True, blank=True)
+    talaba = models.ForeignKey(Talaba, on_delete=models.CASCADE)
     kitob = models.ForeignKey(Kitob, on_delete=models.SET_NULL, null=True, blank=True)
     kutubxonachi = models.ForeignKey(Kutubxonachi, on_delete=models.SET_NULL, null=True, blank=True)
     olingan_sana = models.DateTimeField(auto_now_add=True)
